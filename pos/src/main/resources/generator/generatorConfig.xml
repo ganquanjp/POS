@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+    <!-- データソースドライバ -->
+    <classPathEntry  location="C:\Tools\postgresql-42.1.4.jar"/>
+    <context id="PostgresTables" targetRuntime="MyBatis3">
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <!-- コメント生成を外す -->
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+        <!--データベースURL、ユーザー、パスワード -->
+        <jdbcConnection
+        	driverClass="org.postgresql.Driver"
+        	connectionURL="jdbc:postgresql://localhost:5432/postgres"
+        	userId="nkss"
+        	password="nkss">
+        </jdbcConnection>
+        <javaTypeResolver>
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+        <!-- モジュールファイル場所 -->
+        <javaModelGenerator targetPackage="jp.co.nsd.nkssweb.repository" targetProject="nkss-web/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+            <property name="trimStrings" value="true"/>
+        </javaModelGenerator>
+        <!-- マッピングファイル場所 -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="nkss-web/src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- DAOファイル場所 -->
+        <javaClientGenerator type="XMLMAPPER" targetPackage="jp.co.nsd.nkssweb.repository.mapper" targetProject="nkss-web/src/main/java">
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+        <!-- テーブル名-->
+        <table
+        	tableName="sample"
+        	domainObjectName="Sample"
+        	enableCountByExample="false"
+        	enableUpdateByExample="false"
+        	enableDeleteByExample="false"
+        	enableSelectByExample="false"
+        	selectByExampleQueryId="false">
+        </table>
+    </context>
+</generatorConfiguration>
