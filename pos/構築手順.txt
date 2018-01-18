@@ -29,4 +29,5 @@
 			
 4.pom.xmlより、maven install
 
-5.generatorConfig.xmlより,run mybatis generator 課題：元ファイル上書き
+5.generatorConfig.xml作成し,run mybatis generator 
+  課題：元ファイル上書き
