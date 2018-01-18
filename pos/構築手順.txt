@@ -1,6 +1,4 @@
-1.eclipse‚Émaven‚ÅwebƒvƒƒWƒFƒNƒgƒtƒHƒ‹ƒ_[‚Ìd‘g‚İì¬
-
-2.springboot initializr‚Åpom.xml‚ğì¬
+1.springboot initializrã§pom.xmlã‚’ä½œæˆ
   Core---DevTool
       |--Aspects
       
@@ -8,9 +6,9 @@
   SQL ---MyBatis
       |--PostgreSQL
 
-3.pom.xml•ÒW
- ‡@ spring-boot-starter-web‚Ìexclusion’Ç‰Á(warƒtƒ@ƒCƒ‹‚Åtomcat‚Ödeploy‚½‚ß)
-    tomcat‚ğœ‚­
+2.pom.xmlç·¨é›†
+ â‘  spring-boot-starter-webã®exclusionè¿½åŠ (warãƒ•ã‚¡ã‚¤ãƒ«ã§tomcatã¸deployãŸã‚)
+    tomcatã‚’é™¤ã
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
@@ -21,7 +19,7 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
- ‡A mybatis.generator plugin’Ç‰Á
+ â‘¡ mybatis.generator pluginè¿½åŠ 
 			<plugin>
 				<groupId>org.mybatis.generator</groupId>
 				<artifactId>mybatis-generator-maven-plugin</artifactId>
@@ -35,10 +33,10 @@
 				-->
 			</plugin>
 			
-4.pom.xml‚æ‚èAmaven install
+3.pom.xmlã‚ˆã‚Šã€maven install
 
-5.generatorConfig.xmlì¬‚µ,run mybatis generator 
+4.generatorConfig.xmlä½œæˆã—,run mybatis generator 
 
-6.controllerAservice‚Æservice impl‚ğì¬
+5.controllerã€serviceã¨service implã‚’ä½œæˆ
 
-7.deploy
+6.deploy
