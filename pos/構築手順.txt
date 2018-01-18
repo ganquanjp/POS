@@ -1,0 +1,32 @@
+1.eclipseにmavenでwebプロジェクト作成
+
+2.springboot initializrでpom.xmlを作成
+
+3.pom.xml編集
+ ① spring-boot-starter-webのexclusion追加
+    tomcatを除く
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+ ② mybatis.generator plugin追加
+			<plugin>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-maven-plugin</artifactId>
+				<version>1.3.5</version>
+				<configuration>
+					<configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
+					<overwrite>true</overwrite>
+					<verbose>true</verbose>
+				</configuration>
+			</plugin>
+			
+4.pom.xmlより、maven install
+
+5.generatorConfig.xmlより,run mybatis generator 課題：元ファイル上書き
