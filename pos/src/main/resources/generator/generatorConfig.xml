@@ -3,8 +3,9 @@
         PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
         "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 <generatorConfiguration>
-    <!-- データソースドライバ -->
-    <classPathEntry  location="C:\Tools\postgresql-42.1.4.jar"/>
+	<properties resource="application.properties"/>
+    <!-- データソースドライバ
+    <classPathEntry  location="C:\Tools\postgresql-42.1.4.jar"/>-->
     <context id="PostgresTables" targetRuntime="MyBatis3">
         <commentGenerator>
             <property name="suppressDate" value="true"/>
@@ -13,10 +14,10 @@
         </commentGenerator>
         <!--データベースURL、ユーザー、パスワード -->
         <jdbcConnection
-        	driverClass="org.postgresql.Driver"
-        	connectionURL="jdbc:postgresql://localhost:5432/postgres"
-        	userId="nkss"
-        	password="nkss">
+        	driverClass="${spring.datasource.driver-class-name}"
+        	connectionURL="${spring.datasource.url}"
+        	userId="${spring.datasource.username}"
+        	password="${spring.datasource.password}">
         </jdbcConnection>
         <javaTypeResolver>
             <property name="forceBigDecimals" value="false"/>
