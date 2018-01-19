@@ -35,7 +35,7 @@
 			
 3.pom.xmlより、maven install
 
-4.generatorConfig.xml作成し,run mybatis generator 
+4.MyBatis Generator プラグインをインストールして、generatorConfig.xml作成し,run mybatis generator 
 
 5.controller、serviceとservice implを作成
 
